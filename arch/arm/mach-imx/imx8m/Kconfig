@@ -103,6 +103,12 @@ config TARGET_IMX8MM_EVK
 	select MISC
 	select SPL_CRYPTO_SUPPORT if SPL
 
+config TARGET_IMX8MM_ICORE
+	bool "imx8mm iCore Engicam module"
+	select IMX8MM
+	select SUPPORT_SPL
+	select IMX8M_LPDDR4
+
 config TARGET_IMX8MM_VENICE
 	bool "Support Gateworks Venice iMX8M Mini module"
 	select IMX8MM
@@ -268,6 +274,7 @@ source "board/freescale/imx8mm_evk/Kconfig"
 source "board/freescale/imx8mm_val/Kconfig"
 source "board/freescale/imx8mn_evk/Kconfig"
 source "board/freescale/imx8mp_evk/Kconfig"
+source "board/engicam/imx8mm_icore/Kconfig"
 source "board/gateworks/venice/Kconfig"
 source "board/google/imx8mq_phanbell/Kconfig"
 source "board/technexion/pico-imx8mq/Kconfig"
